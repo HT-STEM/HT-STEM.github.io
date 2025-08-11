@@ -3,9 +3,10 @@
   @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   @import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   
-  * {
+  body {
     margin: 0;
     padding: 0;
+    overflow-x: clip;
   }
 
   .space-mono-regular {
@@ -14,30 +15,30 @@
     font-style: normal;
   }
 
-  .menu_bar {
+  #menu_bar {
     position: sticky;
     top: 0;
-    background-color: lightgray;
-    height: 5vh;
+    overflow: hidden;
+    background-color: white;
   }
 
-  .button {
-    border: none;
+  #menu_bar a {
+    float: right;
+    display: block;
     color: black;
+    background-color: white;
     text-align: center;
-    display: inline-block;
-    font-size: 16px;
+    padding: 2vh;
+    text-decoration: none;
+    font-size: 20px;
     cursor: pointer;
-    background-color: lightgrey;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-
   }
 
-  .button:hover {background-color: gray}
+  #menu_bar a:hover {
+    background-color: lightgray;
+  }
 
-  .button:active {
+  #menu_bar a:active {
     background-color: white;
   }
 
@@ -51,7 +52,6 @@
     background-size: cover;
     height: 100vh; 
     background-position: center center;
-    overflow: hidden;
   }
 
   .science {
@@ -59,6 +59,7 @@
     top: 15vh;
     left: 20vw;
     font-size: 500%;
+    color: white;
   }
 
   .technology {
@@ -66,6 +67,7 @@
     top: 30vh;
     left: 20vw;
     font-size: 500%;
+    color: white;
   }
 
   .engineering {
@@ -73,6 +75,7 @@
     top: 45vh;
     left: 20vw;
     font-size: 500%;
+    color: white;
   }
 
   .mathematics {
@@ -80,6 +83,7 @@
     top: 60vh;
     left: 20vw;
     font-size: 500%;
+    color: white;
   }
 
   .typewriter {
@@ -101,32 +105,31 @@
 
 <title> HT STEM Club | Homepage </title>
 
-<header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="menu_bar space-mono-regular">
-        <span> Image </span>
-        <button class="button space-mono-regular" style="right: 50vw"> Science </button>
-        <button class="button space-mono-regular" style="right: 40vw;"> Technology </button>
-        <button class="button space-mono-regular" style="right: 30vw;"> Engineering </button>
-        <button class="button space-mono-regular" style="right: 20vw;"> Mathematics </button>
-        <button class="button space-mono-regular" style="right: 10vw;"> Login </button>
-    </div>
 
-    <div class="first_page">
-        <h1 class="science typewriter"> Science </h1> <br><br>
-        <h1 class="technology typewriter"> Technology </h1> <br><br>
-        <h1 class="engineering typewriter"> Engineering </h1> <br><br>
-        <h1 class="mathematics typewriter"> Mathematics </h1> <br><br>
-    </div>
+<div id="menu_bar" class="space-mono-regular">
+  <a href="login"> Login </a>
+  <a href="mathematics"> Mathematics </a>
+  <a href="engineering"> Engineering </a>
+  <a href="technology"> Technology </a>
+  <a href="science"> Science </a>
 
-</header>
+</div>
+
 
 <body>
-  <center>
-    <div class="second_page">
-        <h1> Welcome!</h1> <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div>
-  </center>
+
+  <div class="first_page">
+    <h1 class="science typewriter"> Science </h1> <br><br>
+    <h1 class="technology typewriter"> Technology </h1> <br><br>
+    <h1 class="engineering typewriter"> Engineering </h1> <br><br>
+    <h1 class="mathematics typewriter"> Mathematics </h1> <br><br>
+  </div>
+
+  <div class="second_page">
+  <div>
+
 </body>
 
 <!--   
