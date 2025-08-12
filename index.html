@@ -7,6 +7,7 @@
     margin: 0;
     padding: 0;
     overflow-x: clip;
+    position: relative;
   }
 
   .space-mono-regular {
@@ -20,6 +21,7 @@
     top: 0;
     overflow: hidden;
     background-color: white;
+    z-index: 999;
   }
 
   #menu_bar a {
@@ -48,10 +50,11 @@
     font-style: normal;
 
     background-image: url("https://images6.alphacoders.com/122/1226333.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 100vh; 
     background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
   .science {
@@ -90,50 +93,97 @@
     overflow: hidden;
     animation: typewriter 4s steps(200) 0.5s 1 normal both,
         blinkTextCursor 500ms steps(200) infinite normal;
-    }
+  }
 
   @keyframes typewriter {
         from {width: 0;}
         to {width: 24em;}
-    }
+  }
 
   @keyframes blinkTextCursor{
         from {border-right-color: rgba(255,255,255,.75);}
         to {border-right-color: transparent;}
-    }
+  }
+  
+  .second_page {
+    background: white;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .intro, .image {
+    display: inline-block;
+  }
+
+  .footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 15vh;
+    width: 100%;
+    background-color: lightgray;
+    text-align: center;
+  }
+
+  .credits {
+    color: black; 
+    width: 10vw; 
+    padding: 5px; 
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 </style>
 
 <title> HT STEM Club | Homepage </title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<div id="demo">
-  <div id="menu_bar" class="space-mono-regular">
-    <a href="login"> Login </a>
-    <a href="mathematics"> Mathematics </a>
-    <a href="engineering"> Engineering </a>
-    <a href="technology"> Technology </a>
-    <a href="science"> Science </a>
-  
-  </div>
-  
-  
-  <body>
-  
-    <div class="first_page">
-      <h1 class="science typewriter"> Science </h1> <br><br>
-      <h1 class="technology typewriter"> Technology </h1> <br><br>
-      <h1 class="engineering typewriter"> Engineering </h1> <br><br>
-      <h1 class="mathematics typewriter"> Mathematics </h1> <br><br>
-    </div>
-  
-    <div class="second_page">
-    <div>
-  
-  </body>
-      
+
+<div id="menu_bar" class="space-mono-regular">
+  <a href="login"> Login </a>
+  <a href="mathematics"> Mathematics </a>
+  <a href="engineering"> Engineering </a>
+  <a href="technology"> Technology </a>
+  <a href="science"> Science </a>
 </div>
-      
+
+
+<body>
+
+  <div class="first_page">
+    <h1 class="science typewriter"> Science </h1> <br><br>
+    <h1 class="technology typewriter"> Technology </h1> <br><br>
+    <h1 class="engineering typewriter"> Engineering </h1> <br><br>
+    <h1 class="mathematics typewriter"> Mathematics </h1> <br><br>
+  </div>
+
+  <div class="second_page">
+    
+    <div class="intro">
+      About STEM Club
+    </div>
+
+    <div class="image">
+      <img src="https://harrogate-college.ac.uk/wp-content/uploads/2021/05/STEM-STAMP_Generic_black-300x298.png">
+    </div>
+
+  <div class="footer">
+    <small>
+      <div class="credits"> © 
+        2025 HT STEM Association<br>
+        made available under <a href="/LICENSE">AGPLv3</a> license
+      </div>
+    </small>
+  </div>
+
+  <div>
+    
+  </div>
+</body>
+
 <!--   
 <div class="first_page">
   <img src="Images/Science.png"></img>
@@ -143,10 +193,9 @@
 </div>
    -->
 
-<center>
-  <p id="message" style="display: none;">Unfortunately the website does not yet work on mobile devices. Please access this website on a desktop.</p>
-</center>
-
+<!-- 
+<p id="demo">This only shows when the window is more than 500.</p>
+<p id="message" style="display: none;">Please use this on a desktop.</p>
 
 <script>
 if (window.innerWidth < 1080){
@@ -154,4 +203,4 @@ if (window.innerWidth < 1080){
     document.getElementById("message").style.display = "block";
 }
 </script>
-
+ -->
